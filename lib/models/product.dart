@@ -3,33 +3,13 @@ class Product {
   final String name;
   final String category;
   final double price;
-  final String image;
+  final String imageUrl;
 
   const Product({
     required this.id,
     required this.name,
     required this.category,
     required this.price,
-    required this.image,
+    required this.imageUrl,
   });
-
-  Map<String, dynamic> toMap() {
-    return {
-      'id': id,
-      'name': name,
-      'category': category,
-      'price': price,
-      'image': image,
-    };
-  }
-
-  factory Product.fromMap(Map<String, dynamic> map) {
-    return Product(
-      id: map['id'] as String,
-      name: map['name'] as String,
-      category: map['category'] as String,
-      price: map['price'] as double,
-      image: map['image'] as String,
-    );
-  }
 }
